@@ -1,0 +1,74 @@
+<template>
+    <main class="flex overflow-hidden py-10">
+        <div class="flex-1 hidden lg:block">
+            <SecondContact />
+        </div>
+        <div class="py-12 flex-1 lg:flex lg:justify-center lg:h-screen ">
+            <div class="max-w-lg flex-1 mx-auto px-4 text-gray-600">
+                <div>
+                    <h3 class="text-gray-800 text-3xl font-semibold sm:text-4xl">
+                        Get in touch
+                    </h3>
+                    <p class="mt-3">
+                        We’d love to hear from you! Please fill out the form bellow.
+                    </p>
+                </div>
+                <form @submit.prevent class="space-y-5 mt-12 lg:pb-12">
+                    <div>
+                        <label class="font-medium">
+                            Full name
+                        </label>
+                        <input type="text" required
+                            class="w-full mt-2 px-3 py-2 text-gray-500 bg-transparent outline-none border focus:border-gray-800 shadow-sm rounded-lg" />
+                    </div>
+                    <div>
+                        <label class="font-medium">
+                            Email
+                        </label>
+                        <input type="email" required
+                            class="w-full mt-2 px-3 py-2 text-gray-500 bg-transparent outline-none border focus:border-gray-800 shadow-sm rounded-lg" />
+                    </div>
+                    <div>
+                        <label class="font-medium">
+                            Phone number
+                        </label>
+                        <div class="relative mt-2">
+                            <div class="absolute inset-y-0 left-3 my-auto h-6 flex items-center border-r pr-2">
+                                <select class="text-sm bg-transparent outline-none rounded-lg h-full">
+                                    <option>US</option>
+                                    <option>ES</option>
+                                    <option>MR</option>
+                                </select>
+                            </div>
+                            <input type="number" placeholder="+1 (555) 000-000" required
+                                class="w-full pl-[4.5rem] pr-3 py-2 appearance-none bg-transparent outline-none border focus:border-gray-800 shadow-sm rounded-lg" />
+                        </div>
+                    </div>
+           
+                    <div>
+                        <label class="font-medium">
+                            Message
+                        </label>
+                        <textarea required
+                            class="w-full mt-2 h-36 px-3 py-2 resize-none appearance-none bg-transparent outline-none border focus:border-gray-800 shadow-sm rounded-lg"></textarea>
+                    </div>
+                    <button
+                        class="w-full px-4 py-2 text-white font-medium bg-gray-800 hover:bg-gray-700 active:bg-gray-900 rounded-lg duration-150">
+                        Submit
+                    </button>
+                </form>
+            </div>
+        </div>
+    </main>
+</template>
+
+<script>
+export default {
+    name: 'ContactForm',
+    data() {
+        return {
+            servicesItems: ["Mobile development", "UI/UX Design", "web development", "SEO"]
+        };
+    },
+};
+</script>
